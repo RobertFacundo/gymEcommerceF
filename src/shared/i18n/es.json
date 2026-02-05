@@ -1,0 +1,23 @@
+{
+  "auth": {
+    "welcome": "Bienvenido",
+    "login": "Ingresar",
+    "register": "Registrarse",
+    "loading": "Cargando...",
+    "toggle": {
+      "noAccount": "¿No tenés cuenta?",
+      "haveAccount": "¿Ya tenés cuenta?",
+      "login": "Ingresar",
+      "register": "Registrate"
+    },
+    "fields": {
+      "name": "Nombre",
+      "email": "Email",
+      "password": "Contraseña"
+    },
+    "errors": {
+      "emailRequired": "El email es obligatorio",
+      "passwordRequired": "La contraseña es obligatoria"
+    }
+  }
+}
