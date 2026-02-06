@@ -5,5 +5,5 @@ import type { RootState } from './rootReducer';
 export const persistConfig: PersistConfig<RootState> = {
     key: 'root',
     storage,
-    whitelist: ['auth'],
+    whitelist: ['auth','theme'],
 };

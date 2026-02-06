@@ -22,7 +22,7 @@ const Auth = () => {
     }, [isAuthenticated, navigate])
 
     return (
-        <section className="flex flex-col items-center justify-center min-h-screen px-4 ">
+        <section className="flex flex-col items-center justify-center min-h-[80vh] px-4 ">
             <motion.div
                 className="w-full max-w-md p-8 rounded-xl shadow-lg bg-white/30 dark:bg-zinc-900/30 backdrop-blur-md border border-zinc-200/50 dark:border-zinc-800
                     shadow-xl shadow-black/5 dark:shadow-black/40 transition-colors duration-800"
