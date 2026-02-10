@@ -1,15 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-const categories = [
-    { label: "Proteins", slug: "proteins" },
-    { label: "Creatine", slug: "creatine" },
-    { label: "Accessories", slug: "accessories" },
-];
-
+import { useCategories } from "../../../features/products/hooks/useCategories";
 
 const CategoriesDropdown = () => {
     const [open, setOpen] = useState(false);
+    const { data: categories, isLoading, error } = useCategories();
+
+    const API_URL = import.meta.env.VITE_API_URL;
 
     return (
         <div
@@ -34,7 +31,18 @@ const CategoriesDropdown = () => {
                                
                             "
                     >
-                        <div className="grid grid-cols-3 gap-8">
+                        {isLoading && (
+                            <p className="p-4 text-sm text-zinc-500">
+                                Loading categories…
+                            </p>
+                        )}
+
+                        {error && (
+                            <p className="p-4 text-sm text-red-500">
+                                Failed to load categories
+                            </p>
+                        )}
+                        {categories && (<div className="grid grid-cols-4 gap-2">
                             {categories.map(cat => (
                                 <Link
                                     key={cat.slug}
@@ -44,17 +52,26 @@ const CategoriesDropdown = () => {
                                             p-4 rounded-lg
                                             hover:bg-zinc-100 dark:hover:bg-zinc-800
                                             transition-colors
+                                            flex flex-col gap-2
                                         "
                                 >
-                                    <h4 className="text-base font-medium tracking-wide">
-                                        {cat.label}
-                                    </h4>
-                                    <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                                        Explore {cat.label.toLowerCase()}
+                                    <div className="flex items-center gap-3 min-h-[40px]">
+                                        <img
+                                            src={`${API_URL}${cat.image}`}
+                                            alt={cat.name.en}
+                                            className="w-22 h-22 object-contain transition-transform group-hover:scale-105"
+                                        />
+                                        <h4 className="text-base font-medium tracking-wide">
+                                            {cat.name.en}
+                                        </h4>
+                                    </div>
+
+                                    <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-snug">
+                                        {cat.description.en}
                                     </p>
                                 </Link>
                             ))}
-                        </div>
+                        </div>)}
                     </div>
                 )}
             </div>
