@@ -14,9 +14,9 @@ const CategoriesDropdown = () => {
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
         >
-            <button className="tracking-wide text-xl hover:text-zinc-800 dark:hover:text-zinc-100 cursor-pointer">
+            <Link to="/products" className="tracking-wide text-xl hover:text-zinc-800 dark:hover:text-zinc-100 cursor-pointer">
                 Products
-            </button>
+            </Link>
             <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3">
                 {open && (
                     <div

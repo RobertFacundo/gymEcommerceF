@@ -6,6 +6,7 @@ import Products from '../features/views/Products';
 import Auth from '../features/views/Auth';
 import Profile from '../features/views/Profile';
 import Membership from "../features/views/Membership";
+import CategoryProducts from "../features/views/CategoryProducts";
 import { ProtectedRoute } from "../shared/app/ProtectedRoute";
 
 export const AppRouter = () => {
@@ -15,10 +16,7 @@ export const AppRouter = () => {
                 <Route element={<MainLayout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/products" element={<Products />} />
-                    {/* <Route path="/products" element={<Products />}>
-                        <Route path=":categorySlug" element={<CategoryProducts />} />
-                        <Route path=":categorySlug/:productId" element={<ProductDetail />} />
-                    </Route> */}
+                    <Route path="/products/:categorySlug" element={<CategoryProducts />} />
                     <Route path="/auth" element={<Auth />} />
                     <Route element={<ProtectedRoute />}>
                         <Route path="/profile" element={<Profile />} />

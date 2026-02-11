@@ -1,7 +1,7 @@
 import type { TranslatedText } from "./category";
 
 export interface Product {
-    id: string;
+    _id: string;
     category: string;
     name: TranslatedText;
     description: TranslatedText;
