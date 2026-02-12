@@ -1,6 +1,6 @@
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { toggleTheme } from "../../redux/slice/theme.slice";
-import i18n from "../../i18n/i18n";
+import { useAppDispatch, useAppSelector } from "../../../../redux/hooks";
+import { toggleTheme } from "../../../../redux/slice/theme.slice";
+import i18n from "../../../../i18n/i18n";
 import IconButton from "./ThemeButton";
 
 const HeaderSystemActions = () => {

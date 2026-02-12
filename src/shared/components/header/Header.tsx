@@ -1,6 +1,6 @@
-import TopBar from "./TopBar";
-import MainHeader from "./MainHeader";
-import SubHeader from "./SubHeader";
+import TopBar from "./top/TopBar";
+import MainHeader from "./main/MainHeader";
+import SubHeader from "./subheader/SubHeader";
 
 const Header = () => {
     return (

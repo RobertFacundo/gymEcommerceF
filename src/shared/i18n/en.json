@@ -19,5 +19,8 @@
       "emailRequired": "Email is required",
       "passwordRequired": "Password is required"
     }
+  },
+  "categories":{
+    "explore":"Explore"
   }
 }

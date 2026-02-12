@@ -1,5 +1,7 @@
 import type { JSX } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { scaleUp } from "../../../shared/animations/animations";
 
 interface BreadcrumbItem {
     label: string;
@@ -13,7 +15,14 @@ interface BreadcrumbProps {
 
 const Breadcrumb = ({ items }: BreadcrumbProps) => {
     return (
-        <nav className="text-xl mb-4" aria-label="breadcrumb">
+        <motion.nav
+            className="text-xl mb-4"
+            aria-label="breadcrumb"
+            variants={scaleUp}     
+            initial="initial"
+            animate="animate"
+            exit="exit"
+        >
             <ol className="flex flex-wrap gap-1 text-zinc-500 dark:text-zinc-400">
                 {items.map((item, index) => (
                     <li key={index} className="flex items-center gap-1">
@@ -31,7 +40,7 @@ const Breadcrumb = ({ items }: BreadcrumbProps) => {
                     </li>
                 ))}
             </ol>
-        </nav>
+        </motion.nav>
     )
 };
 

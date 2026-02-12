@@ -1,6 +1,6 @@
-import HeaderLogo from "./HeaderLogo";
-import HeaderCenterActions from "./HeaderCenterActions";
-import HeaderSystemActions from "./HeaderSystemActions";
+import HeaderLogo from "./logo/HeaderLogo";
+import HeaderCenterActions from "./centerActions/HeaderCenterActions";
+import HeaderSystemActions from "./systemActions/HeaderSystemActions";
 
 const MainHeader = () => {
     return (

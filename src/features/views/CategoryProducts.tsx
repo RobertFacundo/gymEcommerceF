@@ -3,6 +3,7 @@ import { useProductsByCategory } from "../products/hooks/useProducts";
 import Breadcrumb from "../products/components/Breadcrumb";
 import { AiFillHome } from 'react-icons/ai';
 import { CiDumbbell } from "react-icons/ci";
+import ProductCard from "../products/components/ProductCard";
 
 const CategoryProducts = () => {
     const { categorySlug } = useParams();
@@ -24,13 +25,13 @@ const CategoryProducts = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {products?.map(product => (
-                    <div key={product._id} className="border rounded-lg p-4 flex flex-col items-center gap-3 hover:shadow-lg transition-shadow">
-                        <img src={`${API_URL}${product.image}`} alt={product.name.en} className="w-24 h-24 object-contain" />
-                        <h2 className="text-lg font-medium text-center">{product.name.en}</h2>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">{product.description.en}</p>
-                        <p className="font-bold">${product.price}</p>
-                        {/* botón futuro de Add to Cart */}
-                    </div>
+                    <ProductCard
+                        key={product._id}
+                        name={product.name.en}
+                        description={product.description.en}
+                        imageUrl={`${API_URL}${product.image}`}
+                        price={product.price}
+                    />
                 ))}
             </div>
         </div>

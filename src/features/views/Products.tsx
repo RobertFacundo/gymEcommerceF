@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
 import { useCategories } from "../products/hooks/useCategories";
 import Breadcrumb from "../products/components/Breadcrumb";
-import {AiFillHome} from 'react-icons/ai';
-import {CiDumbbell} from 'react-icons/ci'
+import { AiFillHome } from 'react-icons/ai';
+import { CiDumbbell } from 'react-icons/ci'
+import CategoryCard from "../products/components/CategoryCard";
+import { motion } from 'framer-motion';
+import { containerVariants } from "../../shared/animations/animations";
+import { useTranslation } from "react-i18next";
 
 const Products = () => {
     const { data: categories, isLoading, error } = useCategories();
     const API_URL = import.meta.env.VITE_API_URL;
+    const { i18n } = useTranslation();
 
     if (isLoading) return <p>Loading categories...</p>
     if (error) return <p>Failed to laod categories</p>
@@ -17,25 +21,23 @@ const Products = () => {
                 { label: "home", path: "/", icon: <AiFillHome /> },
                 { label: "Products", path: "/products", icon: <CiDumbbell /> },
             ]} />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <motion.div
+                className="flex flex-col gap-6"
+                variants={containerVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+            >
                 {categories?.map(cat => (
-                    <div
+                    <CategoryCard
                         key={cat.slug}
-                        className="border rounded-lg p-4 flex flex-col items-center gap-3 hover:shadow-lg transition-shadow"
-                    >
-                        <img src={`${API_URL}${cat.image}`} alt={cat.name.en} className="w-24 h-24 object-contain" />
-                        <h2 className="text-lg font-medium text-center">{cat.name.en}</h2>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">
-                            {cat.description.en}
-                        </p>
-                        <Link to={`/products/${cat.slug}`}
-                            className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                        >
-                            Explore
-                        </Link>
-                    </div>
+                        slug={cat.slug}
+                        name={cat.name[i18n.language as 'en' | 'es']}
+                        description={cat.description[i18n.language as 'en' | 'es']}
+                        imageUrl={`${API_URL}${cat.image}`}
+                    />
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 };

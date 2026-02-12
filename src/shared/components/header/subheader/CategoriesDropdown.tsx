@@ -1,18 +1,24 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useCategories } from "../../../features/products/hooks/useCategories";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useCategories } from "../../../../features/products/hooks/useCategories";
 
 const CategoriesDropdown = () => {
     const [open, setOpen] = useState(false);
     const { data: categories, isLoading, error } = useCategories();
-
+    const location = useLocation();
     const API_URL = import.meta.env.VITE_API_URL;
+
+    const disabledHover = location.pathname === '/products';
+
+    useEffect(() => {
+        setOpen(false);
+    }, [location.pathname]);
 
     return (
         <div
             className="relative"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
+            onMouseEnter={() => !disabledHover && setOpen(true)}
+            onMouseLeave={() => !disabledHover && setOpen(false)}
         >
             <Link to="/products" className="tracking-wide text-xl hover:text-zinc-800 dark:hover:text-zinc-100 cursor-pointer">
                 Products

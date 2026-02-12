@@ -19,5 +19,8 @@
       "emailRequired": "El email es obligatorio",
       "passwordRequired": "La contraseña es obligatoria"
     }
+  },
+  "categories":{
+    "explore":"Descubra"
   }
 }
