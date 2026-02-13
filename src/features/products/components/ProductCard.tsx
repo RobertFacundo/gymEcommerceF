@@ -1,4 +1,6 @@
 import type { FC } from "react";
+import { motion } from 'framer-motion';
+import { itemVariants } from "../../../shared/animations/animations";
 
 interface ProductProps {
     name: string,
@@ -9,13 +11,36 @@ interface ProductProps {
 
 const ProductCard: FC<ProductProps> = ({ name, imageUrl, description, price }) => {
     return (
-        <div className="border rounded-lg p-4 flex flex-col items-center gap-3 hover:shadow-lg transition-shadow">
-            <img src={imageUrl} alt={name} className="w-24 h-24 object-contain" />
-            <h2 className="text-lg font-medium text-center">{name}</h2>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">{description}</p>
-            <p className="font-bold">${price}</p>
-            {/* Aquí podrías agregar más adelante el botón de Add to Cart */}
-        </div>
+        <motion.div
+            variants={itemVariants}
+            className="
+                 flex gap-5 p-4 rounded-xl
+                 dark:bg-black/60 bg-white/60
+                 hover:scale-[1.03] hover:shadow-xl
+                 transition-all duration-300 ease-out
+            "
+        >
+            <img
+                src={imageUrl}
+                alt={name}
+                className="w-60 h-60 object-contain shrink-0"
+            />
+
+            <div className="flex flex-col justify-between text-black dark:text-white">
+                <div>
+                    <h2 className="text-2xl ">{name}</h2>
+                    <p className="text-sm mt-1 tracking-widest mt-5 text-black/60 dark:text-white/60 text-right">
+                        {description}
+                    </p>
+                </div>
+
+                <div className="flex flex-row justify-around border-t
+                                border-black/20 dark:border-white/20 pt-3">
+                    <p className="text-lg font-bold ">${price}</p>
+                    <button className="text-lg cursor-pointer font-sans tracking-wide">Add to cart</button>
+                </div>
+            </div>
+        </motion.div>
     )
 };
 

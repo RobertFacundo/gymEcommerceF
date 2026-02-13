@@ -4,11 +4,21 @@ import Breadcrumb from "../products/components/Breadcrumb";
 import { AiFillHome } from 'react-icons/ai';
 import { CiDumbbell } from "react-icons/ci";
 import ProductCard from "../products/components/ProductCard";
+import { motion } from 'framer-motion';
+import { containerVariants } from "../../shared/animations/animations";
+import { useTranslation } from "react-i18next";
+import { useCategories } from "../products/hooks/useCategories";
 
 const CategoryProducts = () => {
     const { categorySlug } = useParams();
     const { data: products, isLoading, error } = useProductsByCategory(categorySlug!);
+    const { data: categories } = useCategories();
+
     const API_URL = import.meta.env.VITE_API_URL;
+    const category = categories?.find(cat => cat.slug === categorySlug);
+    const { i18n } = useTranslation();
+
+    const categoryLabel = category?.name[i18n.language as 'en' | 'es'] ?? categorySlug
 
     if (isLoading) return <p>Loading products...</p>
     if (error) return <p>Failed to load products</p>
@@ -19,21 +29,28 @@ const CategoryProducts = () => {
                 items={[
                     { label: "home", path: "/", icon: <AiFillHome /> },
                     { label: "Products", path: "/products", icon: <CiDumbbell /> },
-                    { label: categorySlug! }
+                    { label: categoryLabel! }
                 ]}
             />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <motion.div
+                key={categorySlug}
+                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                variants={containerVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+            >
                 {products?.map(product => (
                     <ProductCard
                         key={product._id}
-                        name={product.name.en}
-                        description={product.description.en}
+                        name={product.name[i18n.language as 'en' | 'es']}
+                        description={product.description[i18n.language as 'en' | 'es']}
                         imageUrl={`${API_URL}${product.image}`}
                         price={product.price}
                     />
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 };

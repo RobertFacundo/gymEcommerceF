@@ -14,6 +14,8 @@ interface CategoryCardProps {
 const CategoryCard: FC<CategoryCardProps> = ({ slug, name, description, imageUrl }) => {
     const { t } = useTranslation();
 
+    console.log(slug,'slug log del category card')
+
     return (
         <motion.div
             className="relative rounded-lg overflow-hidden h-64 w-full 
@@ -26,7 +28,7 @@ const CategoryCard: FC<CategoryCardProps> = ({ slug, name, description, imageUrl
 
             {/* Overlay diagonal */}
             <motion.div
-                className="absolute top-0 right-0 bottom-0 p-4 pl-10 text-white flex flex-col justify-between bg-black/60"
+                className="absolute top-0 right-0 bottom-0 p-4 pl-10 flex flex-col justify-between dark:bg-black/60 bg-white/60 dark:text-white text-black"
                 style={{
                     clipPath: "polygon(31% 0%, 100% 0%, 100% 100%, 0% 100%)"
                 }}
@@ -42,7 +44,7 @@ const CategoryCard: FC<CategoryCardProps> = ({ slug, name, description, imageUrl
                     <Link
                         to={`/products/${slug}`}
                         className="inline-block mt-2 px-4 py-1 rounded 
-                                    bg-white/30 hover:bg-white hover:text-black 
+                                    bg-white/30 hover:bg-white dark:text-white 
                                     dark:bg-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-white
                                     transition-colors duration-400 ease-in-out"
                     >
