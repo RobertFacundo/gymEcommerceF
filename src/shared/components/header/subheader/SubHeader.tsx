@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import CategoriesDropdown from "./CategoriesDropdown";
+import { useTranslation } from "react-i18next";
 
 const SubHeader = () => {
+    const { t } = useTranslation();
 
     return (
         <nav className="
@@ -21,7 +23,7 @@ const SubHeader = () => {
                         transition-colors
                         "
             >
-                Be a member
+                {t("header.beAMember")}
             </Link>
         </nav>
     )

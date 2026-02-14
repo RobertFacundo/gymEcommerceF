@@ -20,7 +20,12 @@
       "passwordRequired": "La contraseña es obligatoria"
     }
   },
-  "categories":{
-    "explore":"Descubra"
+  "categories": {
+    "explore": "Descubra"
+  },
+  "header": {
+    "beAMember": "Obtiene tu membresía",
+    "products": "Productos",
+    "topBar":"🎉 10% OFF con membresía! 🎉"
   }
 }

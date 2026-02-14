@@ -22,5 +22,10 @@
   },
   "categories":{
     "explore":"Explore"
+  },
+  "header":{
+    "beAMember":"Get a membership",
+    "products": "Products",
+    "topBar":"🎉 10% OFF if you become a member! 🎉"
   }
 }
