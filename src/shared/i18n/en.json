@@ -20,12 +20,30 @@
       "passwordRequired": "Password is required"
     }
   },
-  "categories":{
-    "explore":"Explore"
+  "categories": {
+    "explore": "Explore"
   },
-  "header":{
-    "beAMember":"Get a membership",
+  "header": {
+    "beAMember": "Get a membership",
     "products": "Products",
-    "topBar":"🎉 10% OFF if you become a member! 🎉"
+    "topBar": "🎉 10% OFF if you become a member! 🎉"
+  },
+  "home": {
+    "hero": {
+      "freeShipping": {
+        "title": "Free Shipping",
+        "subtitle": "On purchases over $300",
+        "cta": "View products"
+      },
+      "equipGym": {
+        "title": "Equip your gym",
+        "subtitle": "Professional equipment",
+        "cta": "Buy now"
+      },
+      "trainBetter": {
+        "title": "Never give up",
+        "subtitle": ""
+      }
+    }
   }
 }

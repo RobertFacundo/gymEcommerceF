@@ -1,6 +1,15 @@
+import HomeHeroSlider from "../home/components/HomeHeroSlider/HomeHeroSlider";
+
 const Home = () => {
     return (
-        <h1>home</h1>
+        <>
+            <HomeHeroSlider />
+            {/* <HomeHighlights />
+            <FeaturedProductsCarousel />
+            <HomeCategories />
+            <HomeTestimonials />
+            <HomeCTA /> */}
+        </>
     )
 };
 

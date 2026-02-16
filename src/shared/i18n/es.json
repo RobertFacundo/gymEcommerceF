@@ -27,5 +27,23 @@
     "beAMember": "Obtiene tu membresía",
     "products": "Productos",
     "topBar":"🎉 10% OFF con membresía! 🎉"
+  },
+     "home": {
+    "hero": {
+      "freeShipping": {
+        "title": "Envío gratis",
+        "subtitle": "En compras superiores a $300",
+        "cta": "Ver productos"
+      },
+      "equipGym": {
+        "title": "Equipa tu gimnasio",
+        "subtitle": "Con equipamiento profesional",
+        "cta": "Comprar ahora"
+      },
+      "trainBetter": {
+        "title": "Nunca te rindas",
+        "subtitle": ""
+      }
+    }
   }
 }
