@@ -44,6 +44,25 @@
         "title": "Never give up",
         "subtitle": ""
       }
-    }
+    },
+    "highlights": {
+      "shipping": {
+        "title": "Free shipping",
+        "subtitle": "On orders over $300"
+      },
+      "secure": {
+        "title": "Secure payment",
+        "subtitle": "Your data is protected"
+      },
+      "quality": {
+        "title": "Professional quality",
+        "subtitle": "Certified equipment"
+      },
+      "support": {
+        "title": "Dedicated support",
+        "subtitle": "We're here to help"
+      }
+    },
+    "featured":"Selected"
   }
 }

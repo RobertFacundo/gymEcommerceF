@@ -29,7 +29,7 @@ const HomeHeroSlider = () => {
     }, [emblaApi]);
 
     return (
-        <section className="w-full h-[70vh] overflow-hidden">
+        <section className="w-full h-[75vh] overflow-hidden">
             <div ref={emblaRef} className="h-full">
                 <div className="flex h-full">
                     {homeHeroSlides.map(slide => (

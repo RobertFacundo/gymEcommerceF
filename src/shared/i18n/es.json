@@ -26,9 +26,9 @@
   "header": {
     "beAMember": "Obtiene tu membresía",
     "products": "Productos",
-    "topBar":"🎉 10% OFF con membresía! 🎉"
+    "topBar": "🎉 10% OFF con membresía! 🎉"
   },
-     "home": {
+  "home": {
     "hero": {
       "freeShipping": {
         "title": "Envío gratis",
@@ -44,6 +44,25 @@
         "title": "Nunca te rindas",
         "subtitle": ""
       }
-    }
+    },
+    "highlights": {
+      "shipping": {
+        "title": "Envío gratis",
+        "subtitle": "En compras superiores a $300"
+      },
+      "secure": {
+        "title": "Pago seguro",
+        "subtitle": "Protegemos tus datos"
+      },
+      "quality": {
+        "title": "Calidad profesional",
+        "subtitle": "Equipamiento certificado"
+      },
+      "support": {
+        "title": "Soporte dedicado",
+        "subtitle": "Estamos para ayudarte"
+      }
+    },
+    "featured":"Seleccionados"
   }
 }
