@@ -63,6 +63,13 @@
         "subtitle": "Estamos para ayudarte"
       }
     },
-    "featured":"Seleccionados"
+    "featured": "Seleccionados",
+    "CTAmembership": {
+      "membership": "MEMBRESÍA",
+      "title": "Desbloquea beneficios exclusivos",
+      "ul1": "% de descuento en productos seleccionados",
+      "ul2": "Acceso anticipado a nuevos lanzamientos",
+      "ul3": "Ofertas exclusivas para miembros"
+    }
   }
 }

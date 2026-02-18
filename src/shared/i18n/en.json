@@ -63,6 +63,13 @@
         "subtitle": "We're here to help"
       }
     },
-    "featured":"Selected"
+    "featured":"Selected",
+    "CTAmembership":{
+      "membership":"MEMBERSHIP",
+      "title":"Unlock exclusive benefits",
+      "ul1":"% off selected products",
+      "ul2":"Early access to new releases",
+      "ul3":" Members-only offers"
+    }
   }
 }
