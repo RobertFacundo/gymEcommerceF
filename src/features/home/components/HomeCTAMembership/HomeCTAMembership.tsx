@@ -23,7 +23,7 @@ const HomeCTAMembership = () => {
     );
 
     return (
-        <section>
+        <section >
             <div className="max-w-7xl mx-auto px-2">
                 <motion.div
                     variants={containerVariants}
