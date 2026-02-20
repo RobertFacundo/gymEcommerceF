@@ -21,7 +21,7 @@ const TestimonyCard = ({
                 <img
                     src={avatar}
                     alt={name}
-                    className="w-14 h-14 rounded-full object-cover"
+                    className="w-22 h-22 rounded-full object-cover"
                 />
 
                 <div className="flex flex-col">

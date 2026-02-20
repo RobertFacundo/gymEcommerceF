@@ -71,5 +71,11 @@
       "ul2": "Acceso anticipado a nuevos lanzamientos",
       "ul3": "Ofertas exclusivas para miembros"
     }
+  },
+  "footer": {
+    "profile": "Desarrollador Full Stack en busca de mi primer desafío profesional, listo para integrarme a un equipo y contribuir con soluciones reales desde el primer día.",
+    "website":"Visitá mi sitio web!",
+    "projects":"Proyectos",
+    "contact":"Contacto"
   }
 }
