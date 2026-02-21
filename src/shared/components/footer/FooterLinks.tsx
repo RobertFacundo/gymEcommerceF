@@ -7,7 +7,7 @@ const FooterLinks = () => {
     const { t } = useTranslation();
     return (
         <nav className="mt-12">
-            <h4 className="text-lg font-medium mb-4 tracking-widest">
+            <h4 className="text-lg font-medium mb-4 tracking-widest border-b border-black/30 dark:border-white/30">
                 <motion.span variants={fadeIn}>
                     {t('footer.projects')}
                 </motion.span>

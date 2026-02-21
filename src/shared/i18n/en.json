@@ -77,5 +77,20 @@
     "website": "Visit my website!",
     "projects":"Projects",
     "contact":"Contact"
+  },
+  "profile":{
+    "header":{
+      "user":"user since"
+    },
+    "membershipCard":{
+      "membership":"Membership",
+      "become":"Become a member and unlock exclusive benefits",
+      "active":"You are an active member 🎉",
+      "CTA":"Go to membership"
+    },
+    "history":{
+      "title":"Purchase History",
+      "yet":"No purchases yet"
+    }
   }
 }

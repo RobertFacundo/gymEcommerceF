@@ -8,7 +8,7 @@ const FooterSocial = () => {
 
   return (
     <div className="mt-12 text-center">
-      <motion.h2 variants={fadeIn} className="text-lg mb-4 tracking-widest">
+      <motion.h2 variants={fadeIn} className="text-lg mb-4 tracking-widest border-b border-black/30 dark:border-white/30">
         {t('footer.contact')}
       </motion.h2>
       <div className="flex gap-4 justify-center md:justify-start">

@@ -77,5 +77,20 @@
     "website":"Visitá mi sitio web!",
     "projects":"Proyectos",
     "contact":"Contacto"
+  },
+  "profile":{
+    "header":{
+      "user":"usuario desde"
+    },
+    "membershipCard":{
+      "membership":"Membresía",
+      "become":"Conviértete en miembro y desbloquea beneficios exclusivos",
+      "active":"Eres un miembro activo 🎉",
+      "CTA":"Ingresar a la membresía"
+    },
+    "history":{
+      "title":"Historial de compra",
+      "yet":"Aún no has registrado niguna compra"
+    }
   }
 }
