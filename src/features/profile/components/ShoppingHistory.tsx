@@ -9,10 +9,12 @@ interface Props {
 const ShoppingHistory = ({ history }: Props) => {
     const { t } = useTranslation();
 
+    console.log(history, 'log del shopping history')
+
     return (
         <div className="space-y-4 p-5 rounded-xl bg-white/60 dark:bg-black/60 ">
             <h2 className="text-2xl tracking-widest pb-2 border-b border-black/10 dark:border-white/80">
-            {t("profile.history.title")}
+                {t("profile.history.title")}
             </h2>
 
             {history.length === 0 ? (
