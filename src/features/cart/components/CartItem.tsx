@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { useCart } from "../hooks/useCart";
 import { useTranslation } from "react-i18next";
+import { TrashIcon } from "lucide-react";
 
 interface CartItemProps {
   productId: string;
@@ -34,9 +35,9 @@ const CartItem: FC<CartItemProps> = ({ productId, name,image, price, quantity })
         <span className="font-bold">${price * quantity}</span>
         <button
           onClick={handleRemove}
-          className="text-red-500 hover:text-red-700 transition"
+          className="text-red-500/70 hover:text-red-700 transition cursor-pointer"
         >
-          Remove
+          <TrashIcon size={22}/>
         </button>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import type { FC } from "react";
 import CartItem from "./CartItem";
+import { motion } from 'framer-motion';
+import { containerVariants, itemVariants } from "../../../shared/animations/animations";
 
 interface CartListProps {
   items: Array<{
@@ -12,20 +14,30 @@ interface CartListProps {
 }
 
 const CartList: FC<CartListProps> = ({ items }) => {
-  console.log(items, 'log del cartlist, items ')
   return (
-    <div className="flex flex-col gap-1">
+    <motion.div
+      className="flex flex-col gap-1"
+      variants={containerVariants}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+    >
       {items.map(item => (
-        <CartItem
+        <motion.div
           key={item.productId}
-          productId={item.productId}
-          name={item.name}
-          image={item.image}
-          price={item.price}
-          quantity={item.quantity}
-        />
+          variants={itemVariants}
+        >
+          <CartItem
+            key={item.productId}
+            productId={item.productId}
+            name={item.name}
+            image={item.image}
+            price={item.price}
+            quantity={item.quantity}
+          />
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

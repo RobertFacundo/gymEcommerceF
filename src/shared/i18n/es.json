@@ -26,7 +26,7 @@
   "header": {
     "beAMember": "Obtiene tu membresía",
     "products": "Productos",
-    "topBar": "🎉 10% OFF con membresía! 🎉"
+    "topBar": "🎉 30% OFF con membresía! 🎉"
   },
   "home": {
     "hero": {
@@ -92,5 +92,12 @@
       "title":"Historial de compra",
       "yet":"Aún no has registrado niguna compra"
     }
+  },
+  "cart":{
+    "title":"Tu carro",
+    "empty": "Tu carro esta vacío",
+    "checkout":"Ir a pagar",
+    "clear":"Limpiar carro",
+    "recomendation":"Explora nuestros productos y agrega tus favoritos!"
   }
 }

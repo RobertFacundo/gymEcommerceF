@@ -26,7 +26,7 @@
   "header": {
     "beAMember": "Get a membership",
     "products": "Products",
-    "topBar": "🎉 10% OFF if you become a member! 🎉"
+    "topBar": "🎉 30% OFF if you become a member! 🎉"
   },
   "home": {
     "hero": {
@@ -92,5 +92,12 @@
       "title":"Purchase History",
       "yet":"No purchases yet"
     }
+  },
+  "cart":{
+    "title":"Your cart",
+    "empty": "Your cart is empty",
+    "clear":"Clear Cart",
+    "checkout":"Checkout",
+    "recomendation":"Explore our products and add your favorites!"
   }
 }
