@@ -7,7 +7,9 @@ import Auth from '../features/views/Auth';
 import Profile from '../features/views/Profile';
 import Membership from "../features/views/Membership";
 import CategoryProducts from "../features/views/CategoryProducts";
+import CartView from "../features/views/Cart";
 import { ProtectedRoute } from "../shared/app/ProtectedRoute";
+
 
 export const AppRouter = () => {
     return (
@@ -18,6 +20,7 @@ export const AppRouter = () => {
                     <Route path="/products" element={<Products />} />
                     <Route path="/products/:categorySlug" element={<CategoryProducts />} />
                     <Route path="/auth" element={<Auth />} />
+                    <Route path="/cart" element={<CartView />} />
                     <Route element={<ProtectedRoute />}>
                         <Route path="/profile" element={<Profile />} />
                     </Route>

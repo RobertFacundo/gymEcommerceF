@@ -44,9 +44,10 @@ const CategoryProducts = () => {
                 {products?.map(product => (
                     <ProductCard
                         key={product._id}
-                        name={product.name[i18n.language as 'en' | 'es']}
+                        productId={product._id}
+                        name={product.name}
                         description={product.description[i18n.language as 'en' | 'es']}
-                        imageUrl={`${API_URL}${product.image}`}
+                        image={`${API_URL}${product.image}`}
                         price={product.price}
                     />
                 ))}

@@ -1,10 +1,14 @@
+import { Toaster } from 'react-hot-toast'
 import './App.css'
 import { AppRouter } from './app/AppRouter'
 
 function App() {
 
   return (
-    <AppRouter />
+    <>
+      <Toaster position='top-right' />
+      <AppRouter />
+    </>
   )
 }
 

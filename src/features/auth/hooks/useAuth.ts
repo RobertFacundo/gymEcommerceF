@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { useLoginMutation, useRegisterMutation, useMeQuery } from "./auth.queries";
-import { useAppDispatch} from "../../../shared/redux/hooks";
+import { useAppDispatch } from "../../../shared/redux/hooks";
 import { setAuth, logout } from "../redux/auth.slice";
+import { useCart } from "../../cart/hooks/useCart";
 
 export const useAuth = () => {
     const dispatch = useAppDispatch();
+    const { merge } = useCart();
 
     const loginMutation = useLoginMutation();
     const registerMutation = useRegisterMutation();
@@ -18,6 +20,8 @@ export const useAuth = () => {
         console.log(response, 'log del useauth login')
         localStorage.setItem('token', response.token);
         dispatch(setAuth(response.user))
+
+        await merge.mutateAsync().catch(()=>{});
     };
 
     const register = async (data: { name: string, email: string, password: string }) => {
@@ -26,6 +30,8 @@ export const useAuth = () => {
         console.log(response, 'log del useauth register');
         localStorage.setItem('token', response.token);
         dispatch(setAuth(response.user));
+
+        await merge.mutateAsync().catch(()=>{});
     };
 
     useEffect(() => {

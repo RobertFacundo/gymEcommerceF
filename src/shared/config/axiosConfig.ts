@@ -5,6 +5,7 @@ const api = axios.create({
     headers: {
         'Content-Type': 'application/json',
     },
+    withCredentials:true,
 });
 
 api.interceptors.request.use(
@@ -12,7 +13,17 @@ api.interceptors.request.use(
         const token = localStorage.getItem('token');
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
+
+        } else {
+            let guestId = localStorage.getItem('guestId');
+            if (!guestId) {
+                guestId = crypto.randomUUID();
+                localStorage.setItem('guestId', guestId);
+            }
+
+            config.headers['x-guest-id'] = guestId;
         }
+
         return config;
     },
     (error) => Promise.reject(error)
