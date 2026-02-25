@@ -13,6 +13,8 @@ import Checkout from "../features/views/Checkout";
 import CheckoutLayout from "../features/checkout/components/CheckoutLayout";
 import CheckoutCancel from "../features/checkout/components/CheckoutCancel";
 import CheckoutSuccess from "../features/checkout/components/CheckoutSuccess";
+import MembershipLayout from "../features/membership/components/MembershipLayout";
+import MembershipSuccess from "../features/membership/components/MembershipSuccess";
 
 export const AppRouter = () => {
     return (
@@ -32,7 +34,10 @@ export const AppRouter = () => {
                     <Route element={<ProtectedRoute />}>
                         <Route path="/profile" element={<Profile />} />
                     </Route>
-                    <Route path='/membership' element={<Membership />} />
+                    <Route path="/membership" element={<MembershipLayout />}>
+                        <Route index element={<Membership />} />
+                        <Route path="success" element={<MembershipSuccess />} />
+                    </Route>
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -1,8 +1,13 @@
+import MembershipButton from "../membership/components/MembershipButton";
+
 const Membership = () => {
     return (
-        <h1>
-            Membership view
-        </h1>
+        <div>
+            <h1>
+                Membership view
+            </h1>
+            <MembershipButton/>
+        </div>
     )
 };
 
