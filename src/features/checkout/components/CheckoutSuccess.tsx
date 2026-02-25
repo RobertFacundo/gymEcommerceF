@@ -30,7 +30,7 @@ const CheckoutSuccess = () => {
 
     return (
         <div className="space-y-4">
-            <h1 className="text-2xl font-bold">Pago confirmado 🎉</h1>
+            <h1 className="text-2xl tracking-wide text-green-500">Pago confirmado 🎉</h1>
             <p>Gracias por tu compra</p>
             <p>Total: ${sessionData.amount_total / 100}</p>
         </div>
