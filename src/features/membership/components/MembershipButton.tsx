@@ -10,7 +10,7 @@ const MembershipButton = () => {
 
     const session = await mutation.mutateAsync({
       userId: user._id,
-      priceId: 'price_XXXX', // tu precio en Stripe
+      priceId: 'price_1T4j3WJLg00lT3W5QG1nOIAA', // tu precio en Stripe
       successUrl: 'https://gym-ecommerce-f.vercel.app/membership/success',
       cancelUrl: 'https://gym-ecommerce-f.vercel.app/membership/cancel'
     });
