@@ -15,6 +15,8 @@ const MembershipButton = () => {
       cancelUrl: 'https://gym-ecommerce-f.vercel.app/membership/cancel'
     });
 
+    console.log(session, 'log del membership button')
+
     window.location.href = session.url; // redirige a Stripe
   };
 
