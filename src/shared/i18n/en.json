@@ -75,29 +75,52 @@
   "footer": {
     "profile": "Full Stack Developer eager for my first professional opportunity, ready to join a team and make a meaningful impact from day one.",
     "website": "Visit my website!",
-    "projects":"Projects",
-    "contact":"Contact"
+    "projects": "Projects",
+    "contact": "Contact"
   },
-  "profile":{
-    "header":{
-      "user":"user since"
+  "profile": {
+    "header": {
+      "user": "user since"
     },
-    "membershipCard":{
-      "membership":"Membership",
-      "become":"Become a member and unlock exclusive benefits",
-      "active":"You are an active member 🎉",
-      "CTA":"Go to membership"
+    "membershipCard": {
+      "membership": "Membership",
+      "become": "Become a member and unlock exclusive benefits",
+      "active": "You are an active member 🎉",
+      "CTA": "Go to membership"
     },
-    "history":{
-      "title":"Purchase History",
-      "yet":"No purchases yet"
+    "history": {
+      "title": "Purchase History",
+      "yet": "No purchases yet"
     }
   },
-  "cart":{
-    "title":"Your cart",
+  "cart": {
+    "title": "Your cart",
     "empty": "Your cart is empty",
-    "clear":"Clear Cart",
-    "checkout":"Checkout",
-    "recomendation":"Explore our products and add your favorites!"
+    "clear": "Clear Cart",
+    "checkout": "Checkout",
+    "recomendation": "Explore our products and add your favorites!"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "loading": "Loading checkout...",
+    "total": "Total to pay",
+    "testModeWarning": "⚠️ Test mode: use card {{cardNumber}}, any future date – any CVC",
+    "payButton": "Pay",
+    "redirecting": "Redirecting..."
+  },
+  "checkoutSuccess": {
+    "verifyingPayment": "Verifying payment...",
+    "errorLoading": "Error loading payment",
+    "processingPayment": "Processing your payment...",
+    "paymentConfirmed": "Payment confirmed 🎉",
+    "thankYou": "Thank you for your purchase",
+    "total": "Total"
+  },
+  "membership": {
+    "CTA": "Activate Membership",
+    "loginRequired": "You must log in to activate membership",
+    "loginLink": "Log in here",
+    "successTitle": "Membership Activated",
+    "successMessage": "You are now an active member."
   }
 }

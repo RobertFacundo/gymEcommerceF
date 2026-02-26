@@ -1,12 +1,11 @@
+import HomeCTAMembership from "../home/components/HomeCTAMembership/HomeCTAMembership";
 import MembershipButton from "../membership/components/MembershipButton";
 
 const Membership = () => {
     return (
-        <div>
-            <h1>
-                Membership view
-            </h1>
-            <MembershipButton/>
+        <div className="max-w-7xl mx-auto p-6 space-y-6">
+            <HomeCTAMembership />
+            <MembershipButton />
         </div>
     )
 };

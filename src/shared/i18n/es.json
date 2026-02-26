@@ -74,30 +74,53 @@
   },
   "footer": {
     "profile": "Desarrollador Full Stack en busca de mi primer desafío profesional, listo para integrarme a un equipo y contribuir con soluciones reales desde el primer día.",
-    "website":"Visitá mi sitio web!",
-    "projects":"Proyectos",
-    "contact":"Contacto"
+    "website": "Visitá mi sitio web!",
+    "projects": "Proyectos",
+    "contact": "Contacto"
   },
-  "profile":{
-    "header":{
-      "user":"usuario desde"
+  "profile": {
+    "header": {
+      "user": "usuario desde"
     },
-    "membershipCard":{
-      "membership":"Membresía",
-      "become":"Conviértete en miembro y desbloquea beneficios exclusivos",
-      "active":"Eres un miembro activo 🎉",
-      "CTA":"Ingresar a la membresía"
+    "membershipCard": {
+      "membership": "Membresía",
+      "become": "Conviértete en miembro y desbloquea beneficios exclusivos",
+      "active": "Eres un miembro activo 🎉",
+      "CTA": "Ingresar a la membresía"
     },
-    "history":{
-      "title":"Historial de compra",
-      "yet":"Aún no has registrado niguna compra"
+    "history": {
+      "title": "Historial de compra",
+      "yet": "Aún no has registrado niguna compra"
     }
   },
-  "cart":{
-    "title":"Tu carro",
+  "cart": {
+    "title": "Tu carro",
     "empty": "Tu carro esta vacío",
-    "checkout":"Ir a pagar",
-    "clear":"Limpiar carro",
-    "recomendation":"Explora nuestros productos y agrega tus favoritos!"
+    "checkout": "Ir a pagar",
+    "clear": "Limpiar carro",
+    "recomendation": "Explora nuestros productos y agrega tus favoritos!"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "loading": "Cargando checkout...",
+    "total": "Total a pagar",
+    "testModeWarning": "⚠️ Modo test: usá la tarjeta {{cardNumber}} Fecha futura cualquiera – CVC cualquiera",
+    "payButton": "Pagar",
+    "redirecting": "Redirigiendo..."
+  },
+  "checkoutSuccess": {
+    "verifyingPayment": "Verificando pago...",
+    "errorLoading": "Error al cargar el pago",
+    "processingPayment": "Procesando tu pago...",
+    "paymentConfirmed": "Pago confirmado 🎉",
+    "thankYou": "Gracias por tu compra",
+    "total": "Total"
+  },
+  "membership": {
+    "CTA": "Activate Membership",
+    "loginRequired": "Debes iniciar sesión para activar la membresía",
+    "loginLink": "Inicia sesión aquí",
+    "successTitle": "Membresía activada",
+    "successMessage": "Ahora eres un miembro activo."
   }
 }

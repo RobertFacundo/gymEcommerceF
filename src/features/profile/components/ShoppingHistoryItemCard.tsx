@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import type { ShoppingHistoryItem } from "../../../shared/types/user";
 
 interface Props {
@@ -5,6 +6,9 @@ interface Props {
 }
 
 const ShoppingHistoryItemCard = ({ order }: Props) => {
+  const { i18n } = useTranslation();
+  const lang: 'en' | 'es' = i18n.language === 'es' ? 'es' : 'en';
+
   return (
     <div className="rounded-xl border p-4 bg-white/20 dark:bg-zinc-900/20">
       <div className="flex justify-between text-sm mb-2">
@@ -18,7 +22,7 @@ const ShoppingHistoryItemCard = ({ order }: Props) => {
         {order.items.map((item, i) => (
           <li key={i} className="flex justify-between">
             <span>
-              {item.name} x{item.quantity}
+              {item.name[lang]} x{item.quantity}
             </span>
             <span>
               ${item.price * item.quantity}

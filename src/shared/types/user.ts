@@ -1,6 +1,11 @@
+export interface ITranslatedText{
+    en:string,
+    es:string
+}
+
 export interface ShoppingItem {
     productId: string;
-    name: string;
+    name: ITranslatedText;
     price: number;
     quantity: number;
 }
