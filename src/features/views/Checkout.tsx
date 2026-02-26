@@ -35,7 +35,7 @@ const Checkout = () => {
             <h1 className="text-2xl tracking-wide">{t('checkout.title')}</h1>
 
             {/* Acá luego pondremos el resumen del carrito */}
-            <p className="text-lg">{t('checkout.total')}<strong>{total}</strong></p>
+            <p className="text-lg">{t('checkout.total')}{" "}<strong>{total.toFixed(2)}</strong></p>
 
             <div className="bg-yellow-100 p-4 rounded">
                 <p className="text-sm dark:text-black">

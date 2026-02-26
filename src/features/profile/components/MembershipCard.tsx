@@ -15,7 +15,7 @@ const MembershipCard = ({ isMember }: Props) => {
                 {t('profile.membershipCard.membership')}
             </h2>
 
-            <p className="mb-4 text-sm font-sans tracking-wide dark:text-white/80">
+            <p className="mb-4 text-sm tracking-wide dark:text-white/80">
                 {isMember
                     ? t("profile.membershipCard.active")
                     : t("profile.membershipCard.become")}

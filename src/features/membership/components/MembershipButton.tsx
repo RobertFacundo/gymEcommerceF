@@ -26,10 +26,10 @@ const MembershipButton = () => {
   return (
     <div className="space-y-3">
       {!user && (
-        <p className="text-red-500 font-sans tracking-wide">{t('membership.loginRequired')}{" "}
+        <p className="text-zinc-500 font-sans tracking-wide">{t('membership.loginRequired')}{" "}
           <Link
             to="/auth"
-            className="underline font-semibold hover:text-blue-600"
+            className="underline font-semibold text-green-500 hover:text-green-900"
           >
             {t('membership.loginLink')}
           </Link>

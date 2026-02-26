@@ -121,6 +121,7 @@
     "loginRequired": "You must log in to activate membership",
     "loginLink": "Log in here",
     "successTitle": "Membership Activated",
-    "successMessage": "You are now an active member."
+    "successMessage": "You are now an active member.",
+    "activateButton": "Activate Membership"
   }
 }

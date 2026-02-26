@@ -121,6 +121,7 @@
     "loginRequired": "Debes iniciar sesión para activar la membresía",
     "loginLink": "Inicia sesión aquí",
     "successTitle": "Membresía activada",
-    "successMessage": "Ahora eres un miembro activo."
+    "successMessage": "Ahora eres un miembro activo.",
+    "activateButton": "Activar Membresía"
   }
 }
